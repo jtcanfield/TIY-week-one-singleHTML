@@ -3,14 +3,6 @@ function main() {
 $(".aboutbody").hide();
 $(".newsletterbody").hide();
 
-$(".about").on('click', function() {
-    $(".about").addClass("activelink");
-    $(".index").removeClass("activelink");
-    $(".newsletter").removeClass("activelink");
-    $(".aboutbody").show();
-    $(".homebody").hide();
-    $(".newsletterbody").hide();
-  });
 $(".index").on('click', function() {
     $(".index").addClass("activelink");
     $(".about").removeClass("activelink");
@@ -18,6 +10,15 @@ $(".index").on('click', function() {
     $(".homebody").show();
     $(".aboutbody").hide();
     $(".newsletterbody").hide();
+  });
+$(".about").on('click', function() {
+    $(".about").addClass("activelink");
+    $(".index").removeClass("activelink");
+    $(".newsletter").removeClass("activelink");
+    $(".aboutbody").show();
+    $(".homebody").hide();
+    $(".newsletterbody").hide();
+    // $(".title").attr("Bent Creek Ceramics", "Bent Creek Ceramics - About");
   });
 $(".newsletter").on('click', function() {
     $(".newsletter").addClass("activelink");
