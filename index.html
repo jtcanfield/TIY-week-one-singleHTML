@@ -105,20 +105,4 @@
     <script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src='main.js'></script>
-    <script type="text/javascript">
-      var nameInput = document.getElementById('nameInput');
-      var emailInput = document.getElementById('emailInput');
-      var signupButton = document.getElementById('signupButton');
-      signupButton.addEventListener('click', function(e) {
-        var nameVal = nameInput.value;
-        var emailVal = emailInput.value;
-        if (nameVal && emailVal) {
-          alert('Thanks for signing up, ' + nameVal + '. Newsletters will be sent to ' + emailVal);
-            nameInput.value = "";
-            emailInput.value = "";
-        } else {
-          alert('We would love for you to sign up, please provide both your name and email address.');
-        }
-      });
-      </script>
 </html>

@@ -365,7 +365,7 @@ footer {
 .newsletterbody {
   background: url(images/background-2.jpg) 0% 0% no-repeat;
   background-size: cover;
-  padding: 10%;
+  padding: 5% 5% 5% 5%;
 }
 #newslettercontainer{
   animation-name: fadeInLeftFast;
