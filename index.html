@@ -106,54 +106,5 @@
     </footer>
     <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- <script src="main.js"></script> -->
-    <script type="text/javascript">
-    function main() {
-    var number = Math.floor(Math.random() * 6) + 1 ;
-    // alert(number);
-    $(".aboutbody").hide();
-    $(".newsletterbody").hide();
-
-    $(".index").on('click', function() {
-        $(".index").addClass("activelink");
-        $(".about").removeClass("activelink");
-        $(".newsletter").removeClass("activelink");
-        $(".homebody").show();
-        $(".aboutbody").hide();
-        $(".newsletterbody").hide();
-      });
-    $(".about").on('click', function() {
-        $(".about").addClass("activelink");
-        $(".index").removeClass("activelink");
-        $(".newsletter").removeClass("activelink");
-        $(".aboutbody").show();
-        $(".homebody").hide();
-        $(".newsletterbody").hide();
-      });
-    $(".newsletter").on('click', function() {
-        $(".newsletter").addClass("activelink");
-        $(".about").removeClass("activelink");
-        $(".index").removeClass("activelink");
-        $(".newsletterbody").show();
-        $(".aboutbody").hide();
-        $(".homebody").hide();
-      });
-    var nameInput = document.getElementById('nameInput');
-    var emailInput = document.getElementById('emailInput');
-    var signupButton = document.getElementById('signupButton');
-    signupButton.addEventListener('click', function(e) {
-      var nameVal = nameInput.value;
-      var emailVal = emailInput.value;
-      if (nameVal && emailVal) {
-        alert('Thanks for signing up, ' + nameVal + '. Newsletters will be sent to ' + emailVal);
-          nameInput.value = "";
-          emailInput.value = "";
-      } else {
-        alert('We would love for you to sign up, please provide both your name and email address.');
-        }
-      });
-    }
-    $(document).ready(main);
-
-    </script>
+    <script src="main.js"></script>
 </html>
