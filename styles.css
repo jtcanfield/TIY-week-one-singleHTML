@@ -54,6 +54,7 @@ header {
   padding: 15px;
   color: #2B2F26;
   transition: color 0.2s ease-out;
+  cursor:pointer;
 }
 #main-navigation a:hover {
   color: #CD5D67 !important;
@@ -360,7 +361,7 @@ footer {
 /*END ABOUT PAGE SETTINGS*/
 
 /*NEWSLETTER PAGE SETTINGS*/
-#newsletterbody {
+.newsletterbody {
   background: url(images/background-2.jpg) 0% 0% no-repeat;
   background-size: cover;
 }
