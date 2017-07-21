@@ -1,0 +1,473 @@
+/*
+Background: #F2F1E8
+Text: #131511
+Inline Link: #968772
+Inline Link (Hover): #967343
+Navigation Background: #FFFFFF
+Navigation Text: #2B2F26
+Navigation Text (Hover): #CD5D67
+Navigation Text (Active) #968772
+Button Background: #968772
+Button Background (Hover): #966940
+Button Text: #F2F1E8
+Button Text (Hover): #FFFFFF
+Input Border Bottom: #968772
+Input Border Bottom (Focus): #967343
+
+font-family: 'Merriweather', serif;
+font-family: 'Roboto', sans-serif;
+*/
+
+/*TODO
+fix issue where scrolling when fading in causes text to appear above header
+on about page, get paragraphs to fade in/scroll when scrolling
+make button on main page that causes buttons to change text and run away from cursor
+*/
+
+/*GLOBAL SETTINGS*/
+html {
+  font-family: 'Merriweather', serif;
+}
+body {
+  text-align: center;
+  background-color: #F2F1E8;
+  margin: 0;
+  padding-bottom: 100px;
+}
+header {
+  font-family: 'Roboto', sans-serif;
+  height: 50px;
+  z-index: 99;
+}
+#fix {
+  position: fixed;
+  background-color: #FFFFFF;
+  width: 100%;
+  box-shadow: 0 5px 5px #FFFFFF;
+}
+#main-navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#main-navigation a {
+  padding: 15px;
+  color: #2B2F26;
+  transition: color 0.2s ease-out;
+}
+#main-navigation a:hover {
+  color: #CD5D67 !important;
+}
+.activelink {
+  color: #968772 !important;
+}
+#logoimg {
+  height: 30px;
+}
+#logo {
+  background: url("images/bent-creek-logo-coral.png") 49% 42% no-repeat;
+  background-size: 49% 55%;
+  float: left;
+  padding: 10px 10px 10px 10px;
+}
+#logo img {
+  opacity: 1;
+  animation-name: fadeback;
+  animation-duration: 0.5s;
+}
+#logo img:hover {
+  opacity: 0;
+  animation-name: fade;
+  animation-duration: 0.5s;
+}
+footer {
+  background-color: #2B2F26;
+  color: #F2F1E8;
+  text-align: left;
+  padding: 10px 0 10px 10px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  z-index: 2;
+  box-shadow: 0 -5px 5px #2B2F26;
+}
+/*END GLOBAL SETTINGS*/
+
+/*HOME PAGE SETTING*/
+#indexbody{
+  animation-name: fadeInBottom;
+  animation-duration: 2s;
+}
+#bentcreek {
+  font-size: 70px;
+  font-weight: 500;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+#artnature {
+  font-size: 38px;
+  font-weight: 100;
+  margin-top: 0;
+  padding-top: 0;
+}
+/* WARNING - Flexbox below! */
+.photobox {
+  height: 400px;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin: 10px;
+}
+.photobox1 {
+  height: 250px;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin: 0 10px 10px 10px;
+}
+.photobox > div, .photobox1 > div  {
+  margin: 10px;
+  display: flex;
+  align-items: flex-end;
+}
+.photobox > div > div, .photobox1 > div > div{
+  z-index: 1;
+  position: absolute;
+  background-color: #2B2F26;
+  color: #F2F1E8;
+  padding: 10px;
+  margin: -20px 0 0 0;
+}
+/*Images for selections*/
+#div1 {
+  flex-grow: 3;
+  background: url("images/product-1.jpg") 50% 0% no-repeat;
+  background-size: cover;
+}
+#div2 {
+  flex-grow: 1;
+  background: url("images/product-2.jpg") 50% 20% no-repeat;
+  background-size: cover;
+}
+#div3 {
+  flex-grow: 1;
+  background: url("images/product-3.jpg") 50% 50% no-repeat;
+  background-size: cover;
+}
+#div4 {
+  flex-grow: 1;
+  background: url("images/product-4.jpg") 10% 50% no-repeat;
+  background-size: cover;
+}
+#div5 {
+  flex-grow: 1;
+  background: url("images/product-5.jpg") 10% 50% no-repeat;
+  background-size: cover;
+}
+#div6 {
+  flex-grow: 2;
+  background: url("images/product-6.jpg") 50% 20% no-repeat;
+  background-size: cover;
+}
+#div7 {
+  flex-grow: 1;
+  background: url("images/product-7.jpg") 0% 50% no-repeat;
+  background-size: cover;
+}
+#textdiv1:after {
+  content: "Endless Possibilities";
+}
+#textdiv1 {
+  -moz-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+#textdiv1:hover {
+  -moz-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+#textdiv2:after {
+  content: "Sets";
+}
+#textdiv2 {
+  -moz-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+#textdiv2:hover {
+  -moz-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+#textdiv3:after {
+  content: "Textures";
+}
+#textdiv3 {
+  -moz-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+#textdiv3:hover {
+  -moz-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+#textdiv4:after {
+  content: "Tea Time";
+}
+#textdiv4 {
+  -moz-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+#textdiv4:hover {
+  -moz-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+#textdiv5:after {
+  content: "Jars and Containers";
+}
+#textdiv5 {
+  -moz-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+#textdiv5:hover {
+  -moz-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+#textdiv6:after {
+  content: "Wasabi and Saki";
+}
+#textdiv6 {
+  -moz-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+#textdiv6:hover {
+  -moz-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+#textdiv7:after {
+  content: "Sippin' on Sunshine";
+}
+#textdiv7 {
+  -moz-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+#textdiv7:hover {
+  -moz-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+/*END HOME PAGE SETTINGS*/
+
+/*ABOUT PAGE SETTING*/
+#communityofartists{
+  font-size: 72px;
+  font-weight: 400;
+  animation-duration: 3s;
+  animation-name: fadeInRight;
+  z-index: 0;
+}
+#aboutbodydiv{
+  margin: 0 15% 0 15%;
+  text-align: left;
+  display: flex;
+  flex-flow: column wrap;
+  line-height: 2.2em;
+  color: #131511;
+  animation-duration: 3s;
+  animation-name: fadeInLeft;
+}
+#aboutbodydiv h2{
+  font-weight: 400;
+  margin-bottom: -0.5em;
+}
+.aboutparafont {
+  font-size: 20px;
+}
+.aboutparafont a{
+  transition: color 0.2s ease-out;
+}
+#aboutuspara a{
+  color: #2B2F26;
+}
+#aboutuspara a:hover {
+  color: #967343;
+}
+#aboutuspara img{
+  height: 130px;
+  float: left;
+  padding: 15px 35px 10px 0;
+}
+#ourmission{
+  font-style: italic;
+  border-left: 2px solid #C8C8C8;
+  padding-left: 30px;
+  font-weight: 100;
+}
+#roombackground{
+  background: url(images/product-1.jpg) center center no-repeat;
+  background-attachment: fixed;
+  padding: 80px 0 80px 0;
+  margin: 5% -21% 2% -21%;
+}
+#roomtogrow{
+  text-align: center;
+  font-size: 72px;
+  font-weight: 400;
+  color: #FFFFFF;
+}
+#alignsides{
+  display: flex;
+}
+#aboutshelf {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+#aboutshelf img{
+  height: 120px;
+  width: 150px;
+  margin-top: 2em;
+}
+#aboutshelf p{
+  font-size: 12px;
+  line-height: 1.8em;
+}
+#aboutbodydiv table{
+  border-spacing: 0;
+  padding: 20px 20px 20px 0;
+}
+#aboutbodydiv thead tr td{
+  text-align: center;
+}
+#aboutbodydiv thead tr td, #aboutbodydiv tbody tr td {
+  border: 1px solid #131511;
+  padding: 10px;
+}
+.tablecolor {
+  background-color: #F2EADC;
+}
+/*END ABOUT PAGE SETTINGS*/
+
+/*NEWSLETTER PAGE SETTINGS*/
+#newsletterbody {
+  background: url(images/background-2.jpg) 0% 0% no-repeat;
+  background-size: cover;
+}
+#newslettercontainer{
+  animation-name: fadeInLeftFast;
+  animation-duration: 2s;
+  background-color: #FFFFFF;
+  display: flex;
+  flex-flow: column wrap;
+  margin: 8% 25% 0 25%;
+}
+#newslettercontainer h1{
+  padding-top: 5%;
+  font-weight: 200;
+  margin: 2%;
+}
+#newslettercontainer h2{
+  font-weight: 400;
+  margin: 2%;
+}
+#nameInput, #emailInput{
+  font-size: 20px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  margin: 20px 5% 20px 5%;
+  padding: 10px 0 10px 0;
+  border-bottom: 2px solid #968772;
+  transition: border-bottom 0.5s ease-out;
+}
+#nameInput:focus, #emailInput:focus{
+  border-bottom: 2px solid #967343;
+}
+#submitcontainer{
+  padding-bottom: 10%;
+}
+#signupButton{
+  color: #F2F1E8;
+  background-color: #968772;
+  border-radius: 3px;
+  color: #FFF;
+  padding: 3%;
+  border: 0px solid #fff;
+  font-size: 18px;
+  transition: color 1s ease-out;
+  transition: background-color 1s ease-out;
+}
+#signupButton:hover {
+  color: #FFFFFF;
+  background-color: #966940;
+}
+/*END NEWSLETTER PAGE SETTINGS*/
+
+/*BEGIN UNNECESSARY BUT COOL KEYFRAME ANIMATION JUMBLE*/
+@keyframes fadeInLeft {
+   0% {
+      opacity: 0;
+      transform: translateX(-100px);
+   }
+   100% {
+      opacity: 1;
+      transform: translateX(0);
+   }
+}
+@keyframes fadeInRight {
+   0% {
+      opacity: 0;
+      transform: translateX(100px);
+   }
+   100% {
+      opacity: 1;
+      transform: translateX(0);
+   }
+}
+@keyframes fadeInLeftFast {
+   0% {
+      opacity: 0;
+      transform: translateX(-1000px);
+   }
+   100% {
+      opacity: 1;
+      transform: translateX(0);
+   }
+}
+@keyframes fadeInBottom {
+   0% {
+      opacity: 0;
+      transform: translateY(1000px);
+   }
+   100% {
+      opacity: 1;
+      transform: translateY(0);
+   }
+}
+@keyframes fade {
+  0% {
+     opacity: 1;
+  }
+  100% {
+     opacity: 0;
+  }
+}
+@keyframes fadeback {
+  0% {
+     opacity: 0;
+  }
+  100% {
+     opacity: 1;
+  }
+}
