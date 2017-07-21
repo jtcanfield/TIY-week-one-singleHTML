@@ -1,3 +1,26 @@
+function main() {
+$("about").hide();
+$(".html").hide();
+$(".html").fadeIn(1000);
+$(".topbar").hide();
+$(".topbar").fadeIn(2500);
+$(".topbar").on('click', function() {
+    $(".topbar").hide(1000);
+  });
+$(".changepage").on('click', function() {
+   $(".div1").slideToggle(1000);
+   $(".div2").slideToggle(1000);
+   $(".topbar").hide(1000);
+  });
+}
+$(document).ready(main);
+
+
+
+
+
+
+
 /* im definately not about to do some js stuff
 <script src='/main.js'></script>
 <script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
@@ -15,4 +38,4 @@ This Belongs in CSS
 }
 #clickme:hover {
   opacity: 1;
-}
+}*/
