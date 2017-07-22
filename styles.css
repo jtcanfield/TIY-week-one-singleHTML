@@ -158,96 +158,36 @@ footer {
   background: url("images/product-7.jpg") 0% 50% no-repeat;
   background-size: cover;
 }
-#textdiv1:after {
-  content: "Endless Possibilities";
-}
-#textdiv1 {
+#textdiv1, #textdiv2, #textdiv3, #textdiv4, #textdiv5, #textdiv6, #textdiv7 {
   -moz-transition: all 0.4s;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
-#textdiv1:hover {
+#textdiv1:hover, #textdiv2:hover, #textdiv3:hover, #textdiv4:hover, #textdiv5:hover, #textdiv6:hover, #textdiv7:hover  {
   -moz-transform: scale(1.2);
   -webkit-transform: scale(1.2);
   transform: scale(1.2);
+}
+#textdiv1:after {
+  content: "Endless Possibilities";
 }
 #textdiv2:after {
   content: "Sets";
 }
-#textdiv2 {
-  -moz-transition: all 0.4s;
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
-}
-#textdiv2:hover {
-  -moz-transform: scale(1.2);
-  -webkit-transform: scale(1.2);
-  transform: scale(1.2);
-}
 #textdiv3:after {
   content: "Textures";
-}
-#textdiv3 {
-  -moz-transition: all 0.4s;
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
-}
-#textdiv3:hover {
-  -moz-transform: scale(1.2);
-  -webkit-transform: scale(1.2);
-  transform: scale(1.2);
 }
 #textdiv4:after {
   content: "Tea Time";
 }
-#textdiv4 {
-  -moz-transition: all 0.4s;
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
-}
-#textdiv4:hover {
-  -moz-transform: scale(1.2);
-  -webkit-transform: scale(1.2);
-  transform: scale(1.2);
-}
 #textdiv5:after {
   content: "Jars and Containers";
-}
-#textdiv5 {
-  -moz-transition: all 0.4s;
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
-}
-#textdiv5:hover {
-  -moz-transform: scale(1.2);
-  -webkit-transform: scale(1.2);
-  transform: scale(1.2);
 }
 #textdiv6:after {
   content: "Wasabi and Saki";
 }
-#textdiv6 {
-  -moz-transition: all 0.4s;
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
-}
-#textdiv6:hover {
-  -moz-transform: scale(1.2);
-  -webkit-transform: scale(1.2);
-  transform: scale(1.2);
-}
 #textdiv7:after {
   content: "Sippin' on Sunshine";
-}
-#textdiv7 {
-  -moz-transition: all 0.4s;
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
-}
-#textdiv7:hover {
-  -moz-transform: scale(1.2);
-  -webkit-transform: scale(1.2);
-  transform: scale(1.2);
 }
 /*END HOME PAGE SETTINGS*/
 
